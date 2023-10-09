@@ -1,6 +1,5 @@
 .todoList_Card{
     display: flex;
-    width: 30%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
@@ -9,6 +8,12 @@
     text-transform: capitalize;
     font-size: x-large;
     font-weight: 700;
+    transition: 0.2s;
+}
+
+.todoList_Card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 5px black;
 }
 
 .todoList_Card--text {
@@ -26,14 +31,3 @@
     cursor: pointer;
 }
 
-@media (max-width: 700px){
-    .todoList_Card{
-        width: 100%;
-    }
-}
-
-@media (max-width: 1200px){
-    .todoList_Card{
-        width: 40%;
-    }
-}
