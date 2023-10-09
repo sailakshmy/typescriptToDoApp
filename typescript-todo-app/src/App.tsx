@@ -34,6 +34,7 @@ const App: FC = () => {
     let add = active[0];
     if(source.droppableId === 'ActiveList'){
       add = active[source.index];
+      console.log(add);
       active.splice(source.index,1);
     } else if(source.droppableId === 'CompletedList'){
       add = completed[source.index];
@@ -41,8 +42,10 @@ const App: FC = () => {
     }
 
     if(destination.droppableId ==='ActiveList'){
+      add={...add,isDone:false}
       active.splice(destination.index,0,add);
     }else{
+      add={...add,isDone:true}
       completed.splice(destination.index,0,add);
     }
     setCompletedTodoList(completed);
