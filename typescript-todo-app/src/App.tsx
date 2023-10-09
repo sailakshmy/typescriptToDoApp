@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{FC} from 'react';
 import './App.css';
 
-const App =() => {
+const App:FC =() => {
   return (
     <div className="App">
-      Hello World!
+      <span className="heading">Taskify</span>
     </div>
   );
 }
