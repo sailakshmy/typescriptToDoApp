@@ -1,11 +1,8 @@
 import React,{FC, FormEvent, useRef} from 'react';
+import {InputFieldProps} from '../types';
 import './InputField.css';
 
-interface InputFieldProps {
-    todo: string;
-    setTodo: React.Dispatch<React.SetStateAction<string>>;
-    handleTodoToList: (e: FormEvent)=> void;
-}
+
 const InputField:FC<InputFieldProps> =({todo, setTodo, handleTodoToList})=> {
   const inputBoxRef = useRef<HTMLInputElement>(null);
   const handleSubmit = (e: FormEvent) => {
@@ -26,4 +23,4 @@ const InputField:FC<InputFieldProps> =({todo, setTodo, handleTodoToList})=> {
   )
 }
 
-export default InputField
+export default InputField;

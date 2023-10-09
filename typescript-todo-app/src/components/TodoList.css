@@ -4,3 +4,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+@media (max-width: 700px){
+    .todoList{
+        width: 95%
+    }
+}

@@ -1,17 +1,13 @@
 import React, { FC } from 'react';
 import './TodoList.css';
-import {Todo} from '../types';
+import {TodoListProps} from '../types';
+import TodoCard from './TodoCard';
 
-interface TodoListProps{
-    todoList: Todo[];
-    setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>
-
-}
 
 const TodoList:FC<TodoListProps> = ({todoList, setTodoList}) => {
   return (
     <div className='todoList'>
-      {todoList.map((todo)=><li key={todo.id}>{todo.todo}</li>)}
+      {todoList.map((todo)=><TodoCard todo={todo} key={todo.id} todoList={todoList} setTodoList={setTodoList}/>)}
     </div>
   )
 }

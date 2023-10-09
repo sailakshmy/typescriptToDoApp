@@ -1,0 +1,39 @@
+.todoList_Card{
+    display: flex;
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("../assets/watercolor-paper-texture.jpg");
+    color: white;
+    text-transform: capitalize;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.todoList_Card--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+}
+
+.todoList_Card--text:focus {
+    outline: none;
+}
+
+.icons{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+    .todoList_Card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px){
+    .todoList_Card{
+        width: 40%;
+    }
+}
