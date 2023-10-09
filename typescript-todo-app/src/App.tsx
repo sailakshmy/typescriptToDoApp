@@ -2,6 +2,7 @@ import React,{FC, useState, FormEvent} from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import { Todo } from './types';
+import TodoList from './components/TodoList';
 
 const App:FC =() => {
   const [todo, setTodo] = useState<string>("");
@@ -25,6 +26,7 @@ const App:FC =() => {
     <div className="App">
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleTodoToList={handleTodoToList}/>
+      <TodoList todoList={todoList} setTodoList={setTodoList}/>
     </div>
   );
 }
