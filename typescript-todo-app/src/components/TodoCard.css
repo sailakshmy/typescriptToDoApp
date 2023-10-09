@@ -31,3 +31,6 @@
     cursor: pointer;
 }
 
+.dragging {
+    box-shadow: 0 0 20px blue;
+}

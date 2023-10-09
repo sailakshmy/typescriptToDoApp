@@ -13,9 +13,14 @@ export interface InputFieldProps {
 
 export interface TodoListProps{
     todoList: Todo[];
-    setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>
+    setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>;
+    completedTodoList : Todo[];
+    setCompletedTodoList:  React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-export interface TodoCardProps extends TodoListProps{
-    todo: Todo
+export interface TodoCardProps{
+    todo: Todo;
+    todoList: Todo[];
+    setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>;
+    index: number;
 }
